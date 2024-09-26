@@ -1,0 +1,46 @@
+
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="form-container">
+    <%- include("layout/header") %>
+
+    <h2>Add New User <i class="fa fa-user" aria-hidden="true"></i></h2>
+    <form action="/add" method="POST" id="add-form" enctype="multipart/form-data">
+        
+        <!-- Name -->
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Password -->
+        <!-- <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div> -->
+
+        <!-- Image Upload -->
+        <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" value="add new user">Submit</button>
+        </div>
+
+<%- include("layout/footer") %>
